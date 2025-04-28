@@ -10,6 +10,11 @@ author_profile: true
 ---
 
 {% for post in site.categories.projects %}
-  <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-  <p class="archive__item-excerpt">{{ post.excerpt }}</p>
+  <details>
+    <summary><strong>{{ post.title }}</strong><br><span class="archive__item-excerpt">{{ post.excerpt }}</span></summary>
+    <div class="project-content">
+      {{ post.content }}
+    </div>
+  </details>
 {% endfor %}
+
