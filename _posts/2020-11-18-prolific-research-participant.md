@@ -5,8 +5,7 @@ date: 2020-11-18
 tags: [projects, research, behavioral-studies, user-testing, prolific, data]
 categories: [projects]
 ---
-
-## Project Overview
+Some people spend their spare time scrolling. I spent mine contributing to over 150 academic and commercial research studies and picking up a few insights along the way.
 
 Since November 18, 2020, I’ve been an active research participant on **Prolific**, a platform connecting researchers with vetted contributors. Over the years, I’ve completed more than **150 approved studies** — everything from behavioral science experiments to political surveys to vision tests — for universities (including quite a few Ivy League names), research labs, and companies around the world.
 
