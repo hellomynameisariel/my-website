@@ -2,9 +2,7 @@
 layout: default
 ---
 
-{% assign entries_layout = page.entries_layout | default: 'list' %}
-
-<div class="taxonomy-page">
+<section class="page__content">
   <header class="page__header">
     <h1 class="page__title">{{ page.title | escape }}</h1>
     {% if page.subtitle %}
@@ -12,18 +10,24 @@ layout: default
     {% endif %}
   </header>
 
-  <div class="entries-{{ entries_layout }}">
-    {% assign posts = site.categories[page.taxonomy] | sort: "date" | reverse %}
-    {% for post in posts %}
-      <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-        <h2 class="archive__item-title" itemprop="headline">
-          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-          <span class="archive__item-date">({{ post.date | date: "%B %Y" }})</span>
-        </h2>
-        {% if post.excerpt %}
-          <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify }}</p>
-        {% endif %}
-      </article>
+  {% assign posts = site.categories[page.taxonomy] | sort: "date" | reverse %}
+  {% assign posts_by_year = posts | group_by_exp:"post", "post.date | date: '%Y'" %}
+
+  {% for year in posts_by_year %}
+    <h2 id="{{ year.name }}">{{ year.name }}</h2>
+
+    {% assign posts_by_month = year.items | group_by_exp:"post", "post.date | date: '%B'" %}
+    {% for month in posts_by_month %}
+      <h3>{{ month.name }}</h3>
+
+      <ul class="taxonomy__entries">
+        {% for post in month.items %}
+          <li>
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+
     {% endfor %}
-  </div>
-</div>
+  {% endfor %}
+</section>
