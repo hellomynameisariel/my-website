@@ -23,7 +23,7 @@ css: /assets/css/sidepanel.css
 <script>
 document.querySelectorAll('.project-link').forEach(link => {
   link.addEventListener('click', function() {
-    const url = this.dataset.projectUrl;
+    const url = '{{ site.baseurl }}' + this.dataset.projectUrl;
     fetch(url)
       .then(response => response.text())
       .then(html => {
