@@ -1,0 +1,29 @@
+---
+layout: default
+---
+
+{% assign entries_layout = page.entries_layout | default: 'list' %}
+
+<div class="taxonomy-page">
+  <header class="page__header">
+    <h1 class="page__title">{{ page.title | escape }}</h1>
+    {% if page.subtitle %}
+      <p class="page__subtitle">{{ page.subtitle | escape }}</p>
+    {% endif %}
+  </header>
+
+  <div class="entries-{{ entries_layout }}">
+    {% assign posts = site.categories[page.taxonomy] | sort: "date" | reverse %}
+    {% for post in posts %}
+      <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+        <h2 class="archive__item-title" itemprop="headline">
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          <span class="archive__item-date">({{ post.date | date: "%B %Y" }})</span>
+        </h2>
+        {% if post.excerpt %}
+          <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify }}</p>
+        {% endif %}
+      </article>
+    {% endfor %}
+  </div>
+</div>
