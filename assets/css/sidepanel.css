@@ -1,0 +1,31 @@
+#side-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 40%;
+  height: 100%;
+  background: white;
+  border-left: 2px solid #ccc;
+  padding: 1em;
+  overflow-y: auto;
+  box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  transform: translateX(100%);
+  z-index: 1000;
+}
+
+#side-panel:not(.hidden) {
+  transform: translateX(0);
+}
+
+.hidden {
+  display: none;
+}
+
+#close-panel {
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+  float: right;
+}
