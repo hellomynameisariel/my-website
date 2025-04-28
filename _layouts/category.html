@@ -14,27 +14,20 @@ layout: default
   {% assign posts_by_year = posts | group_by_exp:"post", "post.date | date: '%Y'" %}
 
   {% for year in posts_by_year %}
-    <div class="archive__group">
-      <h2 class="archive__group-title">{{ year.name }}</h2>
+    <h2 class="archive__year">{{ year.name }}</h2>
 
-      {% assign posts_by_month = year.items | group_by_exp:"post", "post.date | date: '%B'" %}
-      {% for month in posts_by_month %}
-        <h3 class="archive__month-title">{{ month.name }}</h3>
-
-        <div class="entries-list">
-          {% for post in month.items %}
-            <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-              <h4 class="archive__item-title" itemprop="headline">
-                <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-              </h4>
-              {% if post.excerpt %}
-                <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify | strip_html | truncatewords: 20 }}</p>
-              {% endif %}
-            </article>
-          {% endfor %}
-        </div>
-
-      {% endfor %}
-    </div>
+    {% for post in year.items %}
+      <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+        <h3 class="archive__item-title" itemprop="headline">
+          <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+        </h3>
+        <p class="page__meta">
+          <i class="far fa-clock"></i> {{ post.date | date: "%B %Y" }}
+        </p>
+        {% if post.excerpt %}
+          <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify | strip_html | truncatewords: 20 }}</p>
+        {% endif %}
+      </article>
+    {% endfor %}
   {% endfor %}
 </section>
