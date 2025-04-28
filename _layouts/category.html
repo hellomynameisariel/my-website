@@ -1,1 +1,32 @@
+---
+layout: default
+---
 
+<section class="page__content">
+  <header class="page__header">
+    <h1 class="page__title">{{ page.title | escape }}</h1>
+    {% if page.subtitle %}
+      <p class="page__subtitle">{{ page.subtitle | escape }}</p>
+    {% endif %}
+  </header>
+
+  <div class="archive">
+    {% assign posts = site.categories[page.taxonomy] | sort: "date" | reverse %}
+    {% assign posts_by_year = posts | group_by_exp:"post", "post.date | date: '%Y'" %}
+
+    {% for year in posts_by_year %}
+      <h2 class="archive__item-title">{{ year.name }}</h2>
+
+      {% for post in year.items %}
+        <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+          <h3 class="archive__item-title" itemprop="headline">
+            <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+          </h3>
+          {% if post.excerpt %}
+            <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify | strip_html | truncatewords: 20 }}</p>
+          {% endif %}
+        </article>
+      {% endfor %}
+    {% endfor %}
+  </div>
+</section>
