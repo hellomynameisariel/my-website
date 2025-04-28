@@ -9,7 +9,7 @@ css: /assets/css/sidepanel.css
 <div class="projects-list">
   {% for post in site.categories.projects %}
     <div class="project-link" data-project-url="{{ post.url }}">
-      <strong>{{ post.title }}</strong><br>
+      <a href="javascript:void(0);"><strong>{{ post.title }}</strong></a><br>
       <span>{{ post.excerpt }}</span>
     </div>
   {% endfor %}
@@ -28,15 +28,4 @@ document.querySelectorAll('.project-link').forEach(link => {
       .then(response => response.text())
       .then(html => {
         const parser = new DOMParser();
-        const doc = parser.parseFromString(html, 'text/html');
-        const content = doc.querySelector('.page__main').innerHTML;
-        document.getElementById('panel-content').innerHTML = content;
-        document.getElementById('side-panel').classList.remove('hidden');
-      });
-  });
-});
-
-document.getElementById('close-panel').addEventListener('click', function() {
-  document.getElementById('side-panel').classList.add('hidden');
-});
-</script>
+        const doc = parser.parseFromString(ht
