@@ -1,5 +1,5 @@
 ---
-layout: category
+layout: default
 title: "Projects"
 permalink: /projects/
 author_profile: true
@@ -40,4 +40,3 @@ document.getElementById('close-panel').addEventListener('click', function() {
   document.getElementById('side-panel').classList.add('hidden');
 });
 </script>
-
