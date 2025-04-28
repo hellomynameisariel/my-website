@@ -1,9 +1,10 @@
 ---
 layout: single
-title: "WorkLight: Visual Availability Tracker"
+title: "Tool: WorkLight - Visual Availability Tracker"
 date: 2023-08-11
 tags: [projects, agile, productivity, communication, remote-work]
-categories: [projects]
+categories: [projects, tools]
+excerpt: "A lightweight visual availability tracker to keep remote teams synced without disrupting workflow."
 ---
 
 Clear communication can make or break a team’s momentum — especially in hybrid and remote environments.
