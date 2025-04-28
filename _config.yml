@@ -90,6 +90,7 @@ defaults:
     values:
       layout: single
       author_profile: true
+      css: "/assets/css/sidepanel.css"
 
 category_archive:
   type: liquid
