@@ -2,12 +2,6 @@
 layout: single
 title: "Home"
 permalink: /
-header:
-  overlay_color: "#fff"
-  overlay_filter: "0.0"
-  show_overlay_excerpt: false
-  overlay_text: false
-  caption: ""
 hide_title: true
 ---
 
