@@ -29,7 +29,7 @@ document.querySelectorAll('.project-link').forEach(link => {
       .then(html => {
         const parser = new DOMParser();
         const doc = parser.parseFromString(html, 'text/html');
-        const content = doc.querySelector('.page__content').innerHTML;
+        const content = doc.querySelector('.page__main').innerHTML;
         document.getElementById('panel-content').innerHTML = content;
         document.getElementById('side-panel').classList.remove('hidden');
       });
