@@ -2,7 +2,7 @@
 layout: single
 title: "WorkLight: Visual Availability Tracker"
 date: 2023-08-11
-tags: [projects]
+tags: [projects, agile, productivity, communication, remote-work]
 categories: [projects]
 ---
 
