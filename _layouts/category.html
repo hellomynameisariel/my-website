@@ -3,14 +3,14 @@ layout: default
 ---
 
 <section class="page__content">
-  <header class="page__header">
-    <h1 class="page__title">{{ page.title | escape }}</h1>
-    {% if page.subtitle %}
-      <p class="page__subtitle">{{ page.subtitle | escape }}</p>
-    {% endif %}
-  </header>
-
   <div class="archive">
+    <header class="page__header">
+      <h1 class="page__title">{{ page.title | escape }}</h1>
+      {% if page.subtitle %}
+        <p class="page__subtitle">{{ page.subtitle | escape }}</p>
+      {% endif %}
+    </header>
+
     {% assign posts = site.categories[page.taxonomy] | sort: "date" | reverse %}
     {% assign posts_by_year = posts | group_by_exp:"post", "post.date | date: '%Y'" %}
 
