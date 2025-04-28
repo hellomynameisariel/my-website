@@ -17,15 +17,20 @@ layout: default
     {% for year in posts_by_year %}
       <h2 class="archive__item-title">{{ year.name }}</h2>
 
-      {% for post in year.items %}
-        <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-          <h3 class="archive__item-title" itemprop="headline">
-            <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-          </h3>
-          {% if post.excerpt %}
-            <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify | strip_html | truncatewords: 20 }}</p>
-          {% endif %}
-        </article>
+      {% assign posts_by_month = year.items | group_by_exp:"post", "post.date | date: '%B'" %}
+      {% for month in posts_by_month %}
+        <h3 class="archive__month-title">{{ month.name }}</h3>
+
+        {% for post in month.items %}
+          <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+            <h4 class="archive__item-title" itemprop="headline">
+              <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+            </h4>
+            {% if post.excerpt %}
+              <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify | strip_html | truncatewords: 20 }}</p>
+            {% endif %}
+          </article>
+        {% endfor %}
       {% endfor %}
     {% endfor %}
   </div>
