@@ -6,7 +6,7 @@ tags: [projects, research, ai, privacy, compliance, reports]
 categories: [projects]
 ---
 
-Finding clear answers across major privacy policies turned out to be a project in endurance — full of buried disclosures, circular links, and carefully vague wording.
+Finding clear answers across major privacy policies turned out to be a project in endurance full of buried disclosures, circular links, and vague wording.
 
 I independently reviewed 12 major platforms to determine whether they explicitly stated their stance on using customer data for AI model training.  
 
