@@ -9,6 +9,7 @@ permalink: /projects/timedrift.html
 published: true
 ---
 
+
 # Timedrift
 
 Timedrift is a lightweight, real-time team sync tool I built to solve a recurring challenge: keeping distributed teams visually and mentally aligned during collaborative work sprints.
