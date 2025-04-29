@@ -43,47 +43,49 @@ css: /assets/css/sidepanel.css
 </div>
 
 <script>
-document.querySelectorAll('.project-link').forEach(link => {
-  link.addEventListener('click', function(event) {
-    event.preventDefault();
-    const url = this.getAttribute('data-project-url');
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.project-link').forEach(link => {
+    link.addEventListener('click', function(event) {
+      event.preventDefault();
+      const url = this.getAttribute('data-project-url');
 
-    document.getElementById('panel-content').innerHTML = "Loading...";
+      document.getElementById('panel-content').innerHTML = "Loading...";
 
-    fetch(url)
-      .then(response => response.text())
-      .then(html => {
-        const parser = new DOMParser();
-        const doc = parser.parseFromString(html, 'text/html');
-        const content = doc.querySelector('.project-content');
-        if (content) {
-          document.getElementById('panel-content').innerHTML = content.innerHTML;
-        } else {
-          document.getElementById('panel-content').innerHTML = "Content not found.";
-        }
-        document.getElementById('side-panel').style.transform = 'translateX(0)';
-      })
-      .catch(error => {
-        document.getElementById('panel-content').innerHTML = "Error loading content.";
-        document.getElementById('side-panel').style.transform = 'translateX(0)';
-      });
+      fetch(url)
+        .then(response => response.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(html, 'text/html');
+          const content = doc.querySelector('.project-content');
+          if (content) {
+            document.getElementById('panel-content').innerHTML = content.innerHTML;
+          } else {
+            document.getElementById('panel-content').innerHTML = "Content not found.";
+          }
+          document.getElementById('side-panel').style.transform = 'translateX(0)';
+        })
+        .catch(error => {
+          document.getElementById('panel-content').innerHTML = "Error loading content.";
+          document.getElementById('side-panel').style.transform = 'translateX(0)';
+        });
+    });
   });
-});
 
-document.querySelectorAll('.project-title-link').forEach(link => {
-  link.addEventListener('click', function(event) {
-    event.preventDefault();
-    this.closest('.project-link').click();
+  document.querySelectorAll('.project-title-link').forEach(link => {
+    link.addEventListener('click', function(event) {
+      event.preventDefault();
+      this.closest('.project-link').click();
+    });
   });
-});
 
-document.getElementById('close-panel').addEventListener('click', function() {
-  document.getElementById('side-panel').style.transform = 'translateX(100%)';
-});
-
-document.addEventListener('keydown', function(event) {
-  if (event.key === "Escape") {
+  document.getElementById('close-panel').addEventListener('click', function() {
     document.getElementById('side-panel').style.transform = 'translateX(100%)';
-  }
+  });
+
+  document.addEventListener('keydown', function(event) {
+    if (event.key === "Escape") {
+      document.getElementById('side-panel').style.transform = 'translateX(100%)';
+    }
+  });
 });
 </script>
