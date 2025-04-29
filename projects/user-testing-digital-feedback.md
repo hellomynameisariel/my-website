@@ -9,6 +9,8 @@ permalink: /projects/user-testing-digital-feedback.html
 published: true
 ---
 
+# User Testing and Digital Experience Feedback
+
 Building great products means listening early and often. Since 2020, I have maintained a consistent five-star rating as a user experience tester on **UserTesting**, a platform that connects businesses with real users to gather real-time feedback on products, apps, and websites. By participating in hundreds of tests, I have helped companies improve their digital experiences based on honest and actionable feedback.
 
 ## Key Contributions
