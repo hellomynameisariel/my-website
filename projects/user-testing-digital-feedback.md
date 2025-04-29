@@ -1,9 +1,12 @@
 ---
-layout: single
+layout: project
 title: "User Testing and Digital Experience Feedback: 5-Star Rated Since 2020"
 date: 2020-11-01
 tags: [projects, user-testing, digital-experience, feedback, ux]
 categories: [projects]
+excerpt: "How I provide detailed digital feedback to help major companies refine their products."
+permalink: /projects/user-testing-digital-feedback.html
+published: true
 ---
 
 Building great products means listening early and often. Since 2020, I have maintained a consistent five-star rating as a user experience tester on **UserTesting**, a platform that connects businesses with real users to gather real-time feedback on products, apps, and websites. By participating in hundreds of tests, I have helped companies improve their digital experiences based on honest and actionable feedback.
