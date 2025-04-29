@@ -27,4 +27,4 @@ In early 2020, while volunteering for a newly launched local cat rescue, I desig
 This project showed me how much value comes from combining technical problem-solving with empathy for the people actually using the system. Even a simple prototype can make a real difference when it is designed to fit into the chaos and urgency of real-world operations, not just look good on paper.
 
 ## Prototype
-![Screenshot of Cat Database Prototype](/assets/images/cat-rescue-database.png)
+![Screenshot of Cat Database Prototype](/my-website/assets/images/cat-rescue-database.png)
