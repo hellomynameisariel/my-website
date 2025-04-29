@@ -1,10 +1,14 @@
 ---
-layout: single
+layout: project
 title: "Benchmarking AI Headshot Generation Tools: Comparative Research and Metrics Design"
 date: 2023-04-30
 tags: [projects, research, ai, evaluation, user-testing, metrics, reports]
 categories: [projects]
+excerpt: "How I independently designed and executed a full benchmark study comparing AI headshot generators across technical performance and real-world user experience."
+permalink: /projects/ai-headshot-tool-benchmark.html
+published: true
 ---
+## Benchmarking AI Headshot Generation Tools
 
 Comparing AI headshot generators goes beyond testing features. I designed a complete benchmark framework to capture where each platform succeeded, struggled, or surprised.
 
