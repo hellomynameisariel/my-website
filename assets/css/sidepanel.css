@@ -30,8 +30,8 @@
   float: right;
 }
 
-/* Fixed header */
-.site-header, .navbar, .header {
+/* Fix header */
+.page__header {
   position: fixed;
   top: 0;
   width: 100%;
@@ -40,12 +40,12 @@
   border-bottom: 1px solid #eaeaea;
 }
 
-/* Push down full page content */
-.page, .page__content, .wrapper {
-  padding-top: 80px;
+/* Push down everything so it's not hidden under fixed header */
+.page, .page__content, .wrapper, .projects-list {
+  padding-top: 100px;
 }
 
-/* Project list item */
+/* Project list items */
 .projects-list .project-link {
   margin-bottom: 2rem;
 }
