@@ -67,3 +67,9 @@
   font-size: 1rem;
   color: #666;
 }
+
+.project-link {
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 2rem;
+}
