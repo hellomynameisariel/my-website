@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: project
 title: "Prototype Database for Cat Rescue: Early UX Solution for Animal Care and Tracking"
 date: 2020-01-25
 tags: [projects, ux, prototypes, community, animal-welfare, database]
