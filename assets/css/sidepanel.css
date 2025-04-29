@@ -29,3 +29,22 @@
   cursor: pointer;
   float: right;
 }
+
+.site-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background: white;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.page-content {
+  padding-top: 80px;
+}
+
+.projects-list .project-link {
+  margin-bottom: 2rem; 
+}
+
+
