@@ -22,7 +22,9 @@ css: /assets/css/sidepanel.css
 </style>
 
 <div class="projects-list" style="padding-left: 2rem; max-width: 55%;">
-  {% assign project_posts = site.pages | where_exp: "page", "page.categories contains 'projects'" %}
+  {% assign project_posts = project_posts | sort: "date" | reverse %}
+  {% for post in project_posts %}
+  
   {% assign current_year = "" %}
   {% assign current_month = "" %}
   {% for post in project_posts %}
