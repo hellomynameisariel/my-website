@@ -30,6 +30,7 @@
   float: right;
 }
 
+/* Fixed header */
 .site-header {
   position: fixed;
   top: 0;
@@ -39,12 +40,29 @@
   border-bottom: 1px solid #eaeaea;
 }
 
-.page-content {
+/* Push down page content so it's not hidden under fixed header */
+.page__content, .projects-list {
   padding-top: 80px;
 }
 
+/* Project list item */
 .projects-list .project-link {
-  margin-bottom: 2rem; 
+  margin-bottom: 2rem;
 }
 
+/* Project title link */
+.project-link a {
+  display: block;
+  margin-bottom: 0.5rem; /* (small boost from 0.25rem to 0.5rem) */
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: inherit;
+  text-decoration: none;
+}
 
+/* Project excerpt */
+.project-link span {
+  display: block;
+  font-size: 1rem;
+  color: #666;
+}
