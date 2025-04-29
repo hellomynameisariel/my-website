@@ -4,18 +4,20 @@ title: "WorkLight: Visual Availability Tracker"
 date: 2023-08-11
 tags: [projects, agile, productivity, communication, remote-work, tools]
 categories: [projects]
-excerpt: "A lightweight visual availability tracker to keep remote teams synced without disrupting workflow."
+excerpt: "I built a lightweight visual availability tracker to keep remote teams synced without disrupting workflow."
 permalink: /projects/worklight.html
 published: true
 ---
 
+# WorkLight
+
 Clear communication can make or break a team’s momentum — especially in hybrid and remote environments.
 
-**WorkLight** is a simple status signaling tool that allows users to quickly update their availability with just one click.  
+I built WorkLight as a simple status signaling tool that allows users to quickly update their availability with just one click.
 
 Designed for fast-paced, asynchronous-friendly communication, it helps reduce interruptions while keeping collaboration smooth and visible.
 
-Built with pure HTML, CSS, and vanilla JavaScript, **WorkLight** is lightweight, mobile-friendly, and easy to deploy anywhere.
+Built with pure HTML, CSS, and vanilla JavaScript, WorkLight is lightweight, mobile-friendly, and easy to deploy anywhere.
 
 [**Try WorkLight Live ➔**](https://hellomynameisariel.github.io/worklight/)
 
