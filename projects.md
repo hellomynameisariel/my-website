@@ -7,22 +7,22 @@ css: /assets/css/sidepanel.css
 ---
 
 <div class="projects-list">
-  {% assign project_posts = site.pages | where_exp: "page", "page.categories contains 'projects'" %}
+  {% assign all_docs = site.pages | concat: site.posts %}
+  {% assign project_posts = all_docs | where_exp: "page", "page.categories contains 'projects'" %}
   {% for post in project_posts %}
     <div class="project-link" data-project-url="{{ site.baseurl }}{{ post.url }}">
       <strong><a href="{{ site.baseurl }}{{ post.url }}" class="project-title-link">{{ post.title }}</a></strong><br>
       <span>{{ post.excerpt }}</span>
     </div>
-
   {% endfor %}
 </div>
 
 <div id="side-panel" class="hidden" style="
   position: fixed;
-  top: 60px; /* 🛠 Start just below nav */
+  top: 60px;
   right: 0;
   width: 40%;
-  height: calc(100% - 60px); /* 🛠 Shrink height so footer is still visible */
+  height: calc(100% - 60px);
   background: white;
   box-shadow: -2px 0 5px rgba(0,0,0,0.1);
   overflow-y: auto;
@@ -30,7 +30,6 @@ css: /assets/css/sidepanel.css
   z-index: 9999;
   transform: translateX(100%);
   transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-
 ">
   <button id="close-panel" style="
     position: absolute;
@@ -47,10 +46,9 @@ css: /assets/css/sidepanel.css
 <script>
 document.querySelectorAll('.project-link').forEach(link => {
   link.addEventListener('click', function(event) {
-    event.preventDefault(); // Stop full page reload
+    event.preventDefault();
     const url = this.getAttribute('data-project-url');
 
-    // Clear panel content immediately
     document.getElementById('panel-content').innerHTML = "Loading...";
 
     fetch(url)
@@ -73,7 +71,6 @@ document.querySelectorAll('.project-link').forEach(link => {
   });
 });
 
-// Important: also stop <a> links from doing a full reload!
 document.querySelectorAll('.project-title-link').forEach(link => {
   link.addEventListener('click', function(event) {
     event.preventDefault();
@@ -85,7 +82,6 @@ document.getElementById('close-panel').addEventListener('click', function() {
   document.getElementById('side-panel').style.transform = 'translateX(100%)';
 });
 
-// ESC key closes side panel
 document.addEventListener('keydown', function(event) {
   if (event.key === "Escape") {
     document.getElementById('side-panel').style.transform = 'translateX(100%)';
