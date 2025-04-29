@@ -44,5 +44,3 @@ Timedrift embodies how I approach agile team needs: observing real workflows, id
 
 
 > Timedrift was built for real-world teams, not theoretical sprints. It reflects how I prioritize keeping people connected, even when they're working individually.
-
-[Back to Projects](../projects.md)
