@@ -52,10 +52,9 @@
 }
 
 /* Project title link */
-.project-link a {
-  display: block;
-  margin-top: 20rem;
-  margin-bottom: 0.5rem;
+.project-title-link {
+  display: inline-block;
+  margin-bottom: 0.25rem;
 }
 
 /* Project excerpt */
