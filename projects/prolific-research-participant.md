@@ -1,5 +1,5 @@
 ---
-layout: projects
+layout: project
 title: "Global Research Participation via Prolific: 150+ Studies Across Disciplines"
 date: 2020-11-18
 tags: [projects, research, behavioral-studies, user-testing, prolific, data]
