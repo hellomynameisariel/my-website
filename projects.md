@@ -28,7 +28,8 @@ css: /assets/css/sidepanel.css
   padding: 20px;
   z-index: 9999;
   transform: translateX(100%);
-  transition: transform 0.3s ease; /* 🧈 Butter slide */
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
 ">
   <button id="close-panel" style="
     position: absolute;
