@@ -7,11 +7,10 @@ css: /assets/css/sidepanel.css
 ---
 
 <div class="projects-list">
-  {% assign all_docs = site.pages | concat: site.posts %}
-  {% assign project_posts = all_docs | where_exp: "page", "page.categories contains 'projects'" %}
+  {% assign project_posts = site.pages | where_exp: "page", "page.categories contains 'projects'" %}
   {% for post in project_posts %}
-    <div class="project-link" data-project-url="{{ site.baseurl }}{{ post.url }}">
-      <strong><a href="{{ site.baseurl }}{{ post.url }}" class="project-title-link">{{ post.title }}</a></strong><br>
+    <div class="project-link" data-project-url="{{ site.baseurl }}{{ post.permalink }}">
+      <strong><a href="{{ site.baseurl }}{{ post.permalink }}" class="project-title-link">{{ post.title }}</a></strong><br>
       <span>{{ post.excerpt }}</span>
     </div>
   {% endfor %}
