@@ -57,9 +57,10 @@ body {
     {% endif %}
 
     <div class="project-link" data-project-url="/my-website{{ post.permalink }}">
-      <strong><a href="/my-website{{ post.permalink }}" class="project-title-link">{{ post.title }}</a></strong><br>
+      <a href="/my-website{{ post.permalink }}" class="project-title-link"><strong>{{ post.title }}</strong></a>
       <span>{{ post.excerpt }}</span>
     </div>
+
   {% endfor %}
 </div>
 
