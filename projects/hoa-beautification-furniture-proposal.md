@@ -1,11 +1,15 @@
 ---
-layout: single
+layout: project
 title: "HOA Beautification Committee: Outdoor Furniture Project Proposal"
 date: 2023-10-04
 tags: [projects, community, design, beautification, research, proposal]
 categories: [projects]
+excerpt: "I turned a big-budget beautification project into a streamlined, resident-led success story started with one thing: smart research and better planning."
+permalink: /projects/hoa-beautification-furniture-proposal.html
+published: true
 ---
-Turning a big-budget beautification project into a streamlined, resident-led success story started with one thing: smart research and better planning.
+
+# HOA Beautification Committee
 
 As part of the Beautification Committee for our HOA, I developed a detailed proposal to enhance the building’s shared outdoor spaces. While collaborating with the committee, I independently researched, sourced, and organized all furniture recommendations across six different areas of the property. The final proposal included curated product selections, visual references, live shopping links, and Augmented Reality renderings to make the concepts accessible for both technical and non-technical members.
 
