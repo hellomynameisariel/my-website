@@ -47,10 +47,10 @@ css: /assets/css/sidepanel.css
 <script>
 document.querySelectorAll('.project-link').forEach(link => {
   link.addEventListener('click', function(event) {
-    event.preventDefault();
+    event.preventDefault(); // Stop full page reload
     const url = this.getAttribute('data-project-url');
 
-    // Clear panel content immediately when clicking
+    // Clear panel content immediately
     document.getElementById('panel-content').innerHTML = "Loading...";
 
     fetch(url)
@@ -64,13 +64,20 @@ document.querySelectorAll('.project-link').forEach(link => {
         } else {
           document.getElementById('panel-content').innerHTML = "Content not found.";
         }
-        // Slide open
         document.getElementById('side-panel').style.transform = 'translateX(0)';
       })
       .catch(error => {
         document.getElementById('panel-content').innerHTML = "Error loading content.";
         document.getElementById('side-panel').style.transform = 'translateX(0)';
       });
+  });
+});
+
+// Important: also stop <a> links from doing a full reload!
+document.querySelectorAll('.project-title-link').forEach(link => {
+  link.addEventListener('click', function(event) {
+    event.preventDefault();
+    this.closest('.project-link').click();
   });
 });
 
