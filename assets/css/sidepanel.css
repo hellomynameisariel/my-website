@@ -31,7 +31,7 @@
 }
 
 /* Fixed header */
-.site-header {
+.site-header, .navbar, .header {
   position: fixed;
   top: 0;
   width: 100%;
@@ -40,8 +40,8 @@
   border-bottom: 1px solid #eaeaea;
 }
 
-/* Push down page content so it's not hidden under fixed header */
-.page, .page__content {
+/* Push down full page content */
+.page, .page__content, .wrapper {
   padding-top: 80px;
 }
 
