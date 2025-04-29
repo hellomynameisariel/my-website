@@ -1,10 +1,12 @@
 ---
-layout: single
+layout: project
 title: "[Tool] Timedrift: Real-Time Team Sync Timer"
 date: 2025-04-28
 tags: [projects, agile, productivity, communication, remote-work, tools]
-categories: [projects, tools]
+categories: [projects]
 excerpt: "A real-time timer that keeps remote teams synced to 15-minute sprint blocks."
+permalink: /projects/timedrift.html
+published: true
 ---
 
 # Timedrift
