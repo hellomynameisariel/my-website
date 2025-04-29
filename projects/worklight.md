@@ -6,6 +6,7 @@ tags: [projects, agile, productivity, communication, remote-work, tools]
 categories: [projects]
 excerpt: "A lightweight visual availability tracker to keep remote teams synced without disrupting workflow."
 permalink: /my-website/projects/worklight.html
+published: true
 ---
 
 Clear communication can make or break a team’s momentum — especially in hybrid and remote environments.
