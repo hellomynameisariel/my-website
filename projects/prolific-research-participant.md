@@ -8,6 +8,7 @@ excerpt: "How I contributed to over 150 academic and commercial research studies
 permalink: /projects/prolific-research-participant.html
 published: true
 ---
+
 # Global Research Participation via Prolific
 
 Since November 18, 2020, I’ve been an active research participant on **Prolific**, a platform connecting researchers with vetted contributors. Over the years, I’ve completed more than **150 approved studies** — everything from behavioral science experiments to political surveys to vision tests — for universities (including quite a few Ivy League names), research labs, and companies around the world.
