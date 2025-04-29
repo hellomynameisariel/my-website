@@ -1,6 +1,6 @@
 ---
 layout: project
-title: "[Tool] Timedrift: Real-Time Team Sync Timer"
+title: "Timedrift: Real-Time Team Sync Timer"
 date: 2025-04-28
 tags: [projects, agile, productivity, communication, remote-work, tools]
 categories: [projects]
