@@ -31,14 +31,15 @@
 }
 
 /* Fixed navigation */
-#site-nav, .masthead__menu {
+.masthead {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1000;
   background: white;
+  z-index: 1000;
   border-bottom: 1px solid #eaeaea;
 }
+
 
 /* Push down page content */
 .page, .page__content, .wrapper, .projects-list {
@@ -54,22 +55,15 @@
 .project-link a {
   display: block;
   margin-bottom: 0.5rem;
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: inherit;
-  text-decoration: none;
 }
 
 /* Project excerpt */
 .project-link span {
   display: block;
-  margin-top: 0.5rem;
-  font-size: 1rem;
-  color: #666;
+  margin-top: 0;
+  margin-bottom: 1rem;
 }
 
 .project-link {
-  padding-bottom: 2rem;
-  border-bottom: 1px solid #eee;
   margin-bottom: 2rem;
 }
