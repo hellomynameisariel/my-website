@@ -70,7 +70,7 @@ css: /assets/css/sidepanel.css
     background: none;
     border: none;
     cursor: pointer;
-  ">X</button>
+  ">X [esc]</button>
   <div id="panel-content">Loading...</div>
 </div>
 
