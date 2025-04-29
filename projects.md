@@ -7,6 +7,20 @@ css: /assets/css/sidepanel.css
 ---
 
 <style>
+/* Make nav bar fixed */
+#site-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Push content below fixed nav */
+body {
+  padding-top: 60px;
+}
+
+/* Existing styles */
 .projects-list {
   padding-left: 2rem;
   max-width: 55%;
@@ -20,6 +34,7 @@ css: /assets/css/sidepanel.css
   z-index: 1;
 }
 </style>
+
 
 <div class="projects-list">
   {% assign project_posts = site.pages | where_exp: "page", "page.categories contains 'projects'" %}
