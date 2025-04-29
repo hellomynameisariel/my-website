@@ -3,7 +3,6 @@ layout: default
 title: "Projects"
 permalink: /projects/
 author_profile: true
-css: /assets/css/sidepanel.css
 ---
 
 <link rel="stylesheet" href="/my-website/assets/css/sidepanel.css">
