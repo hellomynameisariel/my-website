@@ -33,6 +33,14 @@ body {
   padding: 0.5rem 0;
   z-index: 1;
 }
+  
+.project-excerpt {
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  color: #555;
+}
+
 </style>
 
 
@@ -58,7 +66,7 @@ body {
 
     <div class="project-link" data-project-url="/my-website{{ post.permalink }}">
       <a href="/my-website{{ post.permalink }}" class="project-title-link"><strong>{{ post.title }}</strong></a>
-      <span>{{ post.excerpt }}</span>
+      <p class="project-excerpt">{{ post.excerpt }}</p>
     </div>
 
   {% endfor %}
