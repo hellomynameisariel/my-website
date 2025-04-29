@@ -48,6 +48,10 @@ document.querySelectorAll('.project-link').forEach(link => {
   link.addEventListener('click', function(event) {
     event.preventDefault();
     const url = this.getAttribute('data-project-url');
+
+    // Clear panel content immediately when clicking
+    document.getElementById('panel-content').innerHTML = "Loading...";
+
     fetch(url)
       .then(response => response.text())
       .then(html => {
@@ -59,6 +63,7 @@ document.querySelectorAll('.project-link').forEach(link => {
         } else {
           document.getElementById('panel-content').innerHTML = "Content not found.";
         }
+        // Slide open
         document.getElementById('side-panel').style.transform = 'translateX(0)';
       })
       .catch(error => {
