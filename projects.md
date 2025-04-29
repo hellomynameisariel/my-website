@@ -16,8 +16,29 @@ css: /assets/css/sidepanel.css
   {% endfor %}
 </div>
 
-<div id="side-panel" class="hidden" style="position:fixed; top:0; right:0; width:40%; height:100%; background:white; box-shadow:-2px 0 5px rgba(0,0,0,0.1); overflow-y:auto; padding:20px; z-index:9999;">
-  <button id="close-panel" style="position:absolute; top:10px; right:10px; font-size:20px; background:none; border:none; cursor:pointer;">✖</button>
+<div id="side-panel" class="hidden" style="
+  position: fixed;
+  top: 60px; /* 🛠 Start just below nav */
+  right: 0;
+  width: 40%;
+  height: calc(100% - 60px); /* 🛠 Shrink height so footer is still visible */
+  background: white;
+  box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+  overflow-y: auto;
+  padding: 20px;
+  z-index: 9999;
+  transform: translateX(100%);
+  transition: transform 0.3s ease; /* 🧈 Butter slide */
+">
+  <button id="close-panel" style="
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  ">✖</button>
   <div id="panel-content">Loading...</div>
 </div>
 
@@ -34,27 +55,26 @@ document.querySelectorAll('.project-link').forEach(link => {
         const content = doc.querySelector('.project-content');
         if (content) {
           document.getElementById('panel-content').innerHTML = content.innerHTML;
-          document.getElementById('side-panel').classList.remove('hidden');
         } else {
           document.getElementById('panel-content').innerHTML = "Content not found.";
-          document.getElementById('side-panel').classList.remove('hidden');
         }
+        document.getElementById('side-panel').style.transform = 'translateX(0)';
       })
       .catch(error => {
         document.getElementById('panel-content').innerHTML = "Error loading content.";
-        document.getElementById('side-panel').classList.remove('hidden');
+        document.getElementById('side-panel').style.transform = 'translateX(0)';
       });
   });
 });
 
 document.getElementById('close-panel').addEventListener('click', function() {
-  document.getElementById('side-panel').classList.add('hidden');
+  document.getElementById('side-panel').style.transform = 'translateX(100%)';
 });
 
-// Close side panel on ESC key
+// ESC key closes side panel
 document.addEventListener('keydown', function(event) {
   if (event.key === "Escape") {
-    document.getElementById('side-panel').classList.add('hidden');
+    document.getElementById('side-panel').style.transform = 'translateX(100%)';
   }
 });
 </script>
