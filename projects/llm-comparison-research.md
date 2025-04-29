@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: project
 title: "Large Language Model Comparative Research and Scoring System"
 date: 2023-07-10
 tags: [projects, research, ai, evaluation, metrics, reports]
