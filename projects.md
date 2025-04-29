@@ -9,7 +9,7 @@ css: /assets/css/sidepanel.css
 <div class="projects-list">
   {% assign project_posts = site.pages | where_exp: "page", "page.categories contains 'projects'" %}
   {% for post in project_posts %}
-    <div class="project-link" data-project-url="{{ post.url | relative_url }}">
+    <div class="project-link" data-project-url="{{ site.baseurl }}{{ post.url }}">
       <strong>{{ post.title }}</strong><br>
       <span>{{ post.excerpt }}</span>
     </div>
