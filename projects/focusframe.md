@@ -8,6 +8,7 @@ excerpt: "I built FocusFrame to make big tasks feel manageable by breaking work 
 permalink: /projects/focusframe.html
 published: true
 ---
+
 # FocusFrame
 
 Sometimes the hardest part is just starting.
