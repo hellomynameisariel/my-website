@@ -6,6 +6,8 @@ author_profile: true
 css: /assets/css/sidepanel.css
 ---
 
+<link rel="stylesheet" href="/my-website/assets/css/sidepanel.css">
+
 <div class="projects-list">
   {% for post in site.categories.projects %}
     <div class="project-link" data-project-url="{{ post.url }}">
