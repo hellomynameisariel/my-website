@@ -1,10 +1,15 @@
 ---
-layout: single
+layout: project
 title: "Privacy Policy Research: AI Training Disclosures"
 date: 2023-09-28
 tags: [projects, research, ai, privacy, compliance, reports]
 categories: [projects]
+excerpt: "I reviewed 12 major privacy policies to uncover how clearly companies disclose the use of customer data for AI training, mapping results with confidence ratings and direct citations."
+permalink: /projects/privacy-ai-research.html
+published: true
 ---
+
+# Privacy Policy Research
 
 Finding clear answers across major privacy policies turned out to be a project in endurance full of buried disclosures, circular links, and vague wording.
 
