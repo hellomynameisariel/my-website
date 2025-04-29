@@ -50,22 +50,21 @@ document.addEventListener('DOMContentLoaded', function() {
       const url = this.getAttribute('data-project-url');
 
       document.getElementById('panel-content').innerHTML = "Loading...";
+      document.getElementById('side-panel').classList.remove('hidden');
 
       fetch(url)
         .then(response => response.text())
         .then(html => {
-          const panel = document.getElementById('panel-content');
           const parser = new DOMParser();
           const doc = parser.parseFromString(html, 'text/html');
-          const projectContent = doc.querySelector('.project-content');
+          const content = doc.querySelector('.project-content');
 
-          if (projectContent) {
-            panel.innerHTML = projectContent.innerHTML;
-            document.getElementById('side-panel').style.transform = 'translateX(0)';
+          if (content) {
+            document.getElementById('panel-content').innerHTML = content.innerHTML;
           } else {
-            panel.innerHTML = "Content not found.";
-            document.getElementById('side-panel').style.transform = 'translateX(0)';
+            document.getElementById('panel-content').innerHTML = "Content not found.";
           }
+          document.getElementById('side-panel').style.transform = 'translateX(0)';
         })
         .catch(error => {
           document.getElementById('panel-content').innerHTML = "Error loading content.";
@@ -83,11 +82,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
   document.getElementById('close-panel').addEventListener('click', function() {
     document.getElementById('side-panel').style.transform = 'translateX(100%)';
+    document.getElementById('side-panel').classList.add('hidden');
   });
 
   document.addEventListener('keydown', function(event) {
     if (event.key === "Escape") {
       document.getElementById('side-panel').style.transform = 'translateX(100%)';
+      document.getElementById('side-panel').classList.add('hidden');
     }
   });
 });
