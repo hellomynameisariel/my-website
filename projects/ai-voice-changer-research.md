@@ -1,10 +1,15 @@
 ---
-layout: single
+layout: project
 title: "AI Voice Changer Research and Comparative Testing"
 date: 2023-09-15
 tags: [projects, research, ai, user-testing, comparison, reports]
 categories: [projects]
+excerpt: "I tested and compared 14 AI voice changers using real audio samples to deliver a structured, side-by-side evaluation of usability and output quality."
+permalink: /projects/ai-voice-changer-research.html
+published: true
 ---
+
+# AI Voice Changer Research and Comparative Testing
 
 Evaluating AI voice changers required a mix of research, trial testing, and direct comparison.
 
