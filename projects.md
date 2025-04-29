@@ -54,15 +54,18 @@ document.addEventListener('DOMContentLoaded', function() {
       fetch(url)
         .then(response => response.text())
         .then(html => {
+          const panel = document.getElementById('panel-content');
           const parser = new DOMParser();
           const doc = parser.parseFromString(html, 'text/html');
-          const content = doc.querySelector('.project-content');
-          if (content) {
-            document.getElementById('panel-content').innerHTML = content.innerHTML;
+          const projectContent = doc.querySelector('.project-content');
+
+          if (projectContent) {
+            panel.innerHTML = projectContent.innerHTML;
+            document.getElementById('side-panel').style.transform = 'translateX(0)';
           } else {
-            document.getElementById('panel-content').innerHTML = "Content not found.";
+            panel.innerHTML = "Content not found.";
+            document.getElementById('side-panel').style.transform = 'translateX(0)';
           }
-          document.getElementById('side-panel').style.transform = 'translateX(0)';
         })
         .catch(error => {
           document.getElementById('panel-content').innerHTML = "Error loading content.";
