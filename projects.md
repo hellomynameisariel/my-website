@@ -6,9 +6,39 @@ author_profile: true
 css: /assets/css/sidepanel.css
 ---
 
-<div class="projects-list">
+<style>
+.projects-list {
+  padding-left: 2rem;
+  max-width: 55%;
+}
+
+.year-heading {
+  position: sticky;
+  top: 60px;
+  background: white;
+  padding: 0.5rem 0;
+  z-index: 1;
+}
+</style>
+
+<div class="projects-list" style="padding-left: 2rem; max-width: 55%;">
   {% assign project_posts = site.pages | where_exp: "page", "page.categories contains 'projects'" %}
+  {% assign current_year = "" %}
+  {% assign current_month = "" %}
   {% for post in project_posts %}
+    {% assign post_year = post.date | date: "%Y" %}
+    {% assign post_month = post.date | date: "%B" %}
+
+  {% if post_year != current_year %}
+    <h2 class="year-heading">{{ post_year }}</h2>
+    {% assign current_year = post_year %}
+  {% endif %}
+
+  {% if post_month != current_month %}
+    <h3>{{ post_month }}</h3>
+    {% assign current_month = post_month %}
+  {% endif %}
+
     <div class="project-link" data-project-url="/my-website{{ post.permalink }}">
       <strong><a href="/my-website{{ post.permalink }}" class="project-title-link">{{ post.title }}</a></strong><br>
       <span>{{ post.excerpt }}</span>
