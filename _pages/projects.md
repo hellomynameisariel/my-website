@@ -29,4 +29,15 @@ document.querySelectorAll('.project-link').forEach(link => {
       .then(response => response.text())
       .then(html => {
         const parser = new DOMParser();
-        const doc = parser.parseFromString(ht
+        const doc = parser.parseFromString(html, 'text/html');
+        const content = doc.querySelector('.page__content').innerHTML;
+        document.getElementById('panel-content').innerHTML = content;
+        document.getElementById('side-panel').classList.remove('hidden');
+      });
+  });
+});
+
+document.getElementById('close-panel').addEventListener('click', function() {
+  document.getElementById('side-panel').classList.add('hidden');
+});
+</script>
