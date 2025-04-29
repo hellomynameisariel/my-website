@@ -4,8 +4,9 @@ title: "Prototype Database for Cat Rescue: Early UX Solution for Animal Care and
 date: 2020-01-25
 tags: [projects, ux, prototypes, community, animal-welfare, database]
 categories: [projects]
+excerpt: "A simple idea, a fast prototype, and a real solution for a rescue that needed more than just good intentions."
+permalink: /projects/cat-rescue-database-prototype.html
 ---
-A simple idea, a fast prototype, and a real solution for a rescue that needed more than just good intentions.
 
 In early 2020, while volunteering for a newly launched local cat rescue, I designed a simple but impactful prototype database to support daily animal care and record-keeping. I was originally tasked with photographing cats for their online adoption profiles, but after hearing the owner's concerns about identification mix-ups, I proposed and created a tool that could help solve a much bigger operational problem.
 
