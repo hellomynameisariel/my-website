@@ -5,7 +5,7 @@ date: 2023-08-11
 tags: [projects, agile, productivity, communication, remote-work, tools]
 categories: [projects]
 excerpt: "A lightweight visual availability tracker to keep remote teams synced without disrupting workflow."
-permalink: /my-website/projects/worklight.html
+permalink: /projects/worklight.html
 published: true
 ---
 
