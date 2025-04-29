@@ -1,10 +1,15 @@
 ---
 layout: single
-title: "Large Language Model (LLM) Comparative Research and Scoring System"
+title: "Large Language Model Comparative Research and Scoring System"
 date: 2023-07-10
 tags: [projects, research, ai, evaluation, metrics, reports]
 categories: [projects]
+excerpt: "I built a structured scoring system to compare 20 LLMs across 1,500 test cases, turning complex outputs into clear, data-driven insights."
+permalink: /projects/llm-comparison-research.html
+published: true
 ---
+
+# LLM Comparative Research
 
 Comparing the performance of LLMs at scale requires more than side-by-side intuition. It demands structure, repeatability, and real-world scoring.
 
