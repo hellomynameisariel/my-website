@@ -38,7 +38,7 @@ css: /assets/css/sidepanel.css
     background: none;
     border: none;
     cursor: pointer;
-  ">✖</button>
+  ">X</button>
   <div id="panel-content">Loading...</div>
 </div>
 
