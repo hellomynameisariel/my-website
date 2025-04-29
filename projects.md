@@ -3,14 +3,14 @@ layout: default
 title: "Projects"
 permalink: /projects/
 author_profile: true
+css: /assets/css/sidepanel.css
 ---
 
-<link rel="stylesheet" href="/my-website/assets/css/sidepanel.css">
-
 <div class="projects-list">
-  {% for post in site.categories.projects %}
-    <div class="project-link" data-project-url="{{ post.url }}">
-      <a href="javascript:void(0);"><strong>{{ post.title }}</strong></a><br>
+  {% assign project_posts = site.pages | where_exp: "page", "page.categories contains 'projects'" %}
+  {% for post in project_posts %}
+    <div class="project-link" data-project-url="{{ post.url | relative_url }}">
+      <strong>{{ post.title }}</strong><br>
       <span>{{ post.excerpt }}</span>
     </div>
   {% endfor %}
@@ -23,15 +23,17 @@ author_profile: true
 
 <script>
 document.querySelectorAll('.project-link').forEach(link => {
-  link.addEventListener('click', function() {
-    const url = '{{ site.baseurl }}' + this.dataset.projectUrl;
+  link.addEventListener('click', function(event) {
+    event.preventDefault();
+    const url = this.getAttribute('data-project-url');
     fetch(url)
       .then(response => response.text())
       .then(html => {
-        const parser = new DOMParser();
-        const doc = parser.parseFromString(html, 'text/html');
-        const content = doc.querySelector('.page__content').innerHTML;
-        document.getElementById('panel-content').innerHTML = content;
+        document.getElementById('panel-content').innerHTML = html;
+        document.getElementById('side-panel').classList.remove('hidden');
+      })
+      .catch(error => {
+        document.getElementById('panel-content').innerHTML = "Error loading content.";
         document.getElementById('side-panel').classList.remove('hidden');
       });
   });
