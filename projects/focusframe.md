@@ -1,9 +1,12 @@
 ---
-layout: single
+layout: project
 title: "FocusFrame: 15-Minute Sprint Tracker"
 date: 2023-06-29
 categories: [projects]
 tags: [agile, scrum, productivity, timeboxing, javascript, html, css, tools]
+excerpt: "I built FocusFrame to make big tasks feel manageable by breaking work into visible, achievable 15-minute sprints."
+permalink: /projects/focusframe.html
+published: true
 ---
 
 Sometimes the hardest part is just starting.
