@@ -15,6 +15,11 @@ css: /assets/css/sidepanel.css
   gap: 1rem;
   padding: 0 1rem;
   overflow-x: auto;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background: white;
 }
 
 #site-nav a {
