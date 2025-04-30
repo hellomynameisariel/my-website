@@ -5,7 +5,7 @@ date: 2025-04-29
 tags: [projects, productivity, focus, remote-work, timer, tools]
 categories: [projects]
 excerpt: "A no-frills timer built for 50-minute focus blocks and 10-minute recovery breaks."
-permalink: /projects/fiftyflow.html
+permalink: /projects/FiftyFlow.html
 published: true
 ---
 
