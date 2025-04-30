@@ -88,6 +88,8 @@ body.flyout-open .overlay {
   {% endfor %}
 </div>
 
+<div id="overlay" class="overlay hidden"></div>
+
 <div id="side-panel" class="hidden" style="
   position: fixed;
   top: 60px;
