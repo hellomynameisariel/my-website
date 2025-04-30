@@ -7,66 +7,98 @@ css: /assets/css/sidepanel.css
 ---
 
 <style>
-html, body {
-  overflow-x: hidden;
-}
+  /* Ensure the navigation bar is fixed and styled appropriately */
+  #site-nav.greedy-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    padding: 0.5rem 1rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: white;
+    z-index: 1000;
+    overflow: hidden;
+  }
 
-body {
-  padding-top: 60px;
-}
+  /* Style for the site title */
+  #site-nav .site-title {
+    flex-shrink: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 
-/* Optional: mild tweak only if your nav isn't already fixed by theme */
-#site-nav {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: white;
-  z-index: 1000;
-}
+  /* Container for visible navigation links */
+  #site-nav .visible-links {
+    display: flex;
+    gap: 1rem;
+    margin-left: auto;
+    list-style: none;
+    padding-left: 0;
+    overflow: hidden;
+    white-space: nowrap;
+  }
 
-/* Optional color or link overrides (safe to tweak) */
-#site-nav .masthead__menu-item a {
-  color: hotpink;
-  text-decoration: none;
-}
+  /* Individual navigation items */
+  #site-nav .masthead__menu-item a {
+    text-decoration: none;
+    color: hotpink;
+    white-space: nowrap;
+  }
 
-/* Existing styles */
-.projects-list {
-  padding-left: 2rem;
-  max-width: 55%;
-}
+  /* Prevent horizontal scrolling */
+  html, body {
+    overflow-x: hidden;
+  }
 
-.year-heading {
-  position: sticky;
-  top: 60px;
-  background: white;
-  padding: 0.5rem 0;
-  z-index: 1;
-}
+  /* Push content below the fixed navigation bar */
+  body {
+    padding-top: 60px;
+  }
 
-.project-excerpt {
-  margin-top: 0.5rem;
-  margin-bottom: 1.5rem;
-  line-height: 1.6;
-  color: #555;
-}
+  /* Styles for the projects list */
+  .projects-list {
+    padding-left: 2rem;
+    max-width: 55%;
+  }
 
-.overlay {
-  position: fixed;
-  top: 60px;
-  left: 0;
-  width: 100%;
-  height: calc(100% - 60px);
-  background: rgba(0, 0, 0, 0.3);
-  z-index: 999;
-  display: none;
-  transition: opacity 0.3s ease;
-}
+  /* Sticky year headings */
+  .year-heading {
+    position: sticky;
+    top: 60px;
+    background: white;
+    padding: 0.5rem 0;
+    z-index: 1;
+  }
 
-body.flyout-open .overlay {
-  display: block;
-}
+  /* Project excerpt styling */
+  .project-excerpt {
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    color: #555;
+  }
+
+  /* Overlay styling */
+  .overlay {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 60px);
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 999;
+    display: none;
+    transition: opacity 0.3s ease;
+  }
+
+  body.flyout-open .overlay {
+    display: block;
+  }
 </style>
+
 
 <div class="projects-list">
   {% assign project_posts = site.pages | where_exp: "page", "page.categories contains 'projects'" %}
