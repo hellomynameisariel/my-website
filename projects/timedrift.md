@@ -9,6 +9,7 @@ permalink: /projects/timedrift.html
 published: true
 ---
 
+![Screenshot of TimeDrift](/my-website/assets/images/timedrift.png)
 
 # Timedrift
 
