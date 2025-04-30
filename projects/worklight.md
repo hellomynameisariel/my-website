@@ -9,6 +9,8 @@ permalink: /projects/worklight.html
 published: true
 ---
 
+![Screenshot of WorkLight](/my-website/assets/images/worklight.png)
+
 # WorkLight
 
 Clear communication can make or break a team’s momentum — especially in hybrid and remote environments.
