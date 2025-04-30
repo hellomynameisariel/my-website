@@ -1,12 +1,12 @@
 #site-nav {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding: 0 1rem;
-  gap: 1rem;
-  white-space: nowrap;
-  overflow-x: auto; /* prevents squishing on smaller screens */
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  margin-left: 1rem;
 }
 
 #side-panel {
