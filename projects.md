@@ -7,13 +7,20 @@ css: /assets/css/sidepanel.css
 ---
 
 <style>
-/* Make nav bar fixed */
 #site-nav {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0 1rem;
+  overflow-x: auto;
 }
+
+#site-nav a {
+  white-space: nowrap;
+}
+
 
 /* Push content below fixed nav */
 body {
