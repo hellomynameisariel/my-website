@@ -5,6 +5,16 @@ permalink: /projects/
 author_profile: true
 css: /assets/css/sidepanel.css
 ---
+<nav id="site-nav">
+  <div class="site-title">
+    <a href="/">Hello, my name is Ariel</a>
+  </div>
+  <div class="nav-links">
+    <a href="/projects/">Projects</a>
+    <a href="/posts/">Posts</a>
+    <a href="/categories/">Categories</a>
+  </div>
+</nav>
 
 <style>
 #site-nav {
@@ -14,18 +24,29 @@ css: /assets/css/sidepanel.css
   align-items: center;
   gap: 1rem;
   padding: 0 1rem;
-  overflow-x: auto;
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1000;
   background: white;
+  z-index: 1000;
+  overflow: hidden; /* prevent horizontal scrollbar next to header */
 }
 
 #site-nav a {
   white-space: nowrap;
 }
 
+.site-title,
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.nav-links a {
+  margin-left: 1rem;
+  white-space: nowrap;
+}
 
 /* Push content below fixed nav */
 body {
