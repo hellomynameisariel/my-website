@@ -5,48 +5,46 @@ permalink: /projects/
 author_profile: true
 css: /assets/css/sidepanel.css
 ---
-<nav id="site-nav">
-  <div class="site-title">
-    <a href="/">Hello, my name is Ariel</a>
-  </div>
-  <div class="nav-links">
-    <a href="/projects/">Projects</a>
-    <a href="/posts/">Posts</a>
-    <a href="/categories/">Categories</a>
-  </div>
-</nav>
 
 <style>
 #site-nav {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   align-items: center;
-  gap: 1rem;
-  padding: 0 1rem;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
   position: fixed;
   top: 0;
   width: 100%;
-  background: white;
   z-index: 1000;
-  overflow: hidden; /* prevent horizontal scrollbar next to header */
+  background: white;
 }
 
-#site-nav a {
+#site-nav .site-title {
+  flex-shrink: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-.site-title,
-.nav-links {
+#site-nav .visible-links {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  gap: 1rem;
+  margin-left: auto;
+  padding-left: 0;
+  list-style: none;
+  flex: 0 1 auto; /* Let it shrink if needed */
+  overflow: hidden; /* prevent nav bar scroll */
 }
 
-.nav-links a {
-  margin-left: 1rem;
+#site-nav .masthead__menu-item a {
   white-space: nowrap;
+  text-decoration: none;
+  color: hotpink; /* customize to match your style */
 }
+
 
 /* Push content below fixed nav */
 body {
