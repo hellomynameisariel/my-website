@@ -7,6 +7,14 @@ css: /assets/css/sidepanel.css
 ---
 
 <style>
+html, body {
+  overflow-x: hidden;
+}
+
+body {
+  padding-top: 60px;
+}
+  
 #site-nav {
   display: flex;
   flex-wrap: wrap;
@@ -16,13 +24,15 @@ css: /assets/css/sidepanel.css
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1000;
   background: white;
+  z-index: 1000;
+  gap: 1rem;
 }
 
 #site-nav .site-title {
-  flex-shrink: 1;
+  flex: 0 1 auto;
   min-width: 0;
+  max-width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -32,18 +42,23 @@ css: /assets/css/sidepanel.css
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  margin-left: auto;
-  padding-left: 0;
+  justify-content: flex-end;
+  flex: 1 1 auto;
   list-style: none;
-  flex: 0 1 auto; /* Let it shrink if needed */
-  overflow: hidden; /* prevent nav bar scroll */
+  padding-left: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+#site-nav .masthead__menu-item {
+  white-space: nowrap;
 }
 
 #site-nav .masthead__menu-item a {
-  white-space: nowrap;
   text-decoration: none;
-  color: hotpink; /* customize to match your style */
+  color: hotpink;
 }
+
 
 
 /* Push content below fixed nav */
