@@ -7,6 +7,49 @@ css: /assets/css/sidepanel.css
 ---
 
 <style>
+  
+#site-nav.greedy-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  padding: 0.5rem 1rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: white;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.greedy-nav__toggle {
+  display: block !important;
+}
+
+#site-nav .site-title {
+  flex-shrink: 1;
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+#site-nav .visible-links {
+  display: flex;
+  gap: 1rem;
+  flex-shrink: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-left: auto;
+}
+
+#site-nav .masthead__menu-item a {
+  text-decoration: none;
+  color: hotpink;
+  white-space: nowrap;
+}
+
 html, body {
   overflow-x: hidden;
 }
