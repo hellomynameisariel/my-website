@@ -27,28 +27,6 @@ css: /assets/css/sidepanel.css
   display: block !important;
 }
 
-#site-nav .site-title {
-  flex-shrink: 1;
-  min-width: 0;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
-#site-nav .visible-links {
-  display: flex;
-  gap: 1rem;
-  flex-shrink: 1;
-  overflow: hidden;
-  white-space: nowrap;
-  margin-left: auto;
-}
-
-#site-nav .masthead__menu-item a {
-  text-decoration: none;
-  color: hotpink;
-  white-space: nowrap;
-}
 
 html, body {
   overflow-x: hidden;
@@ -57,52 +35,6 @@ html, body {
 body {
   padding-top: 60px;
 }
-  
-#site-nav {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.5rem 1rem;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: white;
-  z-index: 1000;
-  gap: 1rem;
-}
-
-#site-nav .site-title {
-  flex: 0 1 auto;
-  min-width: 0;
-  max-width: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-#site-nav .visible-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: flex-end;
-  flex: 1 1 auto;
-  list-style: none;
-  padding-left: 0;
-  margin: 0;
-  overflow: hidden;
-}
-
-#site-nav .masthead__menu-item {
-  white-space: nowrap;
-}
-
-#site-nav .masthead__menu-item a {
-  text-decoration: none;
-  color: hotpink;
-}
-
-
 
 /* Push content below fixed nav */
 body {
