@@ -41,6 +41,22 @@ body {
   color: #555;
 }
 
+  .overlay {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 60px);
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 999; /* below the panel */
+  display: none;
+  transition: opacity 0.3s ease;
+}
+
+body.flyout-open .overlay {
+  display: block;
+}
+
 </style>
 
 
@@ -100,6 +116,9 @@ body {
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
+  const body = document.body;
+  const overlay = document.getElementById('overlay');
+
   document.querySelectorAll('.project-link').forEach(link => {
     link.addEventListener('click', function(event) {
       event.preventDefault();
@@ -107,6 +126,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
       document.getElementById('panel-content').innerHTML = "Loading...";
       document.getElementById('side-panel').classList.remove('hidden');
+      overlay.classList.remove('hidden');
+      body.classList.add('flyout-open');
 
       fetch(url)
         .then(response => response.text())
@@ -136,16 +157,22 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  document.getElementById('close-panel').addEventListener('click', function() {
+  function closePanel() {
     document.getElementById('side-panel').style.transform = 'translateX(100%)';
     document.getElementById('side-panel').classList.add('hidden');
-  });
+    overlay.classList.add('hidden');
+    body.classList.remove('flyout-open');
+  }
+
+  document.getElementById('close-panel').addEventListener('click', closePanel);
 
   document.addEventListener('keydown', function(event) {
     if (event.key === "Escape") {
-      document.getElementById('side-panel').style.transform = 'translateX(100%)';
-      document.getElementById('side-panel').classList.add('hidden');
+      closePanel();
     }
   });
+
+  overlay.addEventListener('click', closePanel);
 });
+
 </script>
