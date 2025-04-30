@@ -7,27 +7,6 @@ css: /assets/css/sidepanel.css
 ---
 
 <style>
-  
-#site-nav.greedy-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: nowrap;
-  gap: 1rem;
-  padding: 0.5rem 1rem;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: white;
-  z-index: 1000;
-  overflow: hidden;
-}
-
-.greedy-nav__toggle {
-  display: block !important;
-}
-
-
 html, body {
   overflow-x: hidden;
 }
@@ -36,9 +15,19 @@ body {
   padding-top: 60px;
 }
 
-/* Push content below fixed nav */
-body {
-  padding-top: 60px;
+/* Optional: mild tweak only if your nav isn't already fixed by theme */
+#site-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: white;
+  z-index: 1000;
+}
+
+/* Optional color or link overrides (safe to tweak) */
+#site-nav .masthead__menu-item a {
+  color: hotpink;
+  text-decoration: none;
 }
 
 /* Existing styles */
@@ -54,7 +43,7 @@ body {
   padding: 0.5rem 0;
   z-index: 1;
 }
-  
+
 .project-excerpt {
   margin-top: 0.5rem;
   margin-bottom: 1.5rem;
@@ -62,14 +51,14 @@ body {
   color: #555;
 }
 
-  .overlay {
+.overlay {
   position: fixed;
   top: 60px;
   left: 0;
   width: 100%;
   height: calc(100% - 60px);
   background: rgba(0, 0, 0, 0.3);
-  z-index: 999; /* below the panel */
+  z-index: 999;
   display: none;
   transition: opacity 0.3s ease;
 }
@@ -77,9 +66,7 @@ body {
 body.flyout-open .overlay {
   display: block;
 }
-
 </style>
-
 
 <div class="projects-list">
   {% assign project_posts = site.pages | where_exp: "page", "page.categories contains 'projects'" %}
@@ -105,7 +92,6 @@ body.flyout-open .overlay {
       <a href="/my-website{{ post.permalink }}" class="project-title-link"><strong>{{ post.title }}</strong></a>
       <p class="project-excerpt">{{ post.excerpt }}</p>
     </div>
-
   {% endfor %}
 </div>
 
@@ -197,5 +183,4 @@ document.addEventListener('DOMContentLoaded', function() {
 
   overlay.addEventListener('click', closePanel);
 });
-
 </script>
