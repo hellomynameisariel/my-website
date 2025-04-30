@@ -9,7 +9,7 @@ permalink: /projects/fiftyflow.html
 published: true
 ---
 
-![Screenshot of FiftyFlow](/assets/images/FiftyFlow.png)
+![Screenshot of FiftyFlow](/my-website/assets/images/FiftyFlow.png)
 
 # FiftyFlow
 
